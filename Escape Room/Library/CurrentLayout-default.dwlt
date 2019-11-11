@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 51
+  controlID: 52
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 52
+  controlID: 53
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 53
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 428
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -386,7 +386,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b8e7ffff
+      m_ExpandedIDs: bcf9ffff78fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -402,7 +402,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 3}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -439,16 +439,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 8b6ec10d0957499459a918a8c3418dfd
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.073884964, y: 5.298127, z: -4.8812747}
+    m_Target: {x: 5.53043, y: -2.4547625, z: 0.076699704}
     speed: 2
-    m_Value: {x: -0.073884964, y: 5.298127, z: -4.8812747}
+    m_Value: {x: 5.53043, y: -2.4547625, z: 0.076699704}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06102876, y: -0.7431038, z: 0.068416975, w: -0.66287005}
+    m_Target: {x: -0.13950455, y: -0.6971941, z: 0.14118977, w: -0.68886936}
     speed: 2
-    m_Value: {x: -0.061233573, y: -0.74110985, z: 0.0682334, w: -0.6650946}
+    m_Value: {x: -0.13971502, y: -0.69615424, z: 0.14097917, w: -0.6899086}
   m_Size:
-    m_Target: 10.353299
+    m_Target: 20.14718
     speed: 2
-    m_Value: 10.841151
+    m_Value: 21.096523
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -644,14 +644,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Materials
   m_LastFoldersGridSize: 81
-  m_LastProjectPath: D:\AINT253\EscapeRoom\New Unity Project
+  m_LastProjectPath: D:\AINT253\EscapeRoom\Escape Room
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e420000
-    m_LastClickedID: 16958
-    m_ExpandedIDs: 00000000703f000000ca9a3b
+    m_SelectedIDs: 9e2d0000
+    m_LastClickedID: 11678
+    m_ExpandedIDs: 00000000882c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +679,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000882c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,7 +723,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
