@@ -2599,6 +2599,8 @@ GameObject:
   - component: {fileID: 2088053756}
   - component: {fileID: 2088053755}
   - component: {fileID: 2088053754}
+  - component: {fileID: 2088053757}
+  - component: {fileID: 2088053758}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2671,6 +2673,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 13.092001, y: 81.078, z: 0}
+--- !u!143 &2088053757
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088053753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: -0.8, z: 0}
+--- !u!114 &2088053758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088053753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45978ebc1830f0d47bc4ca0e935c2787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  turnSpeed: 3
 --- !u!1 &2088078615
 GameObject:
   m_ObjectHideFlags: 0
