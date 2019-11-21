@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float moveSpeed;
-    public float turnSpeed;
+    public float moveSpeed,turnSpeed;
+    public float mouseX, mouseY;
     CharacterController charController;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,11 @@ public class PlayerControl : MonoBehaviour
             Vector3 direction = transform.TransformDirection(Vector3.right);
             charController.SimpleMove(direction * moveSpeed);
         }
+
+        mouseX += Input.GetAxis("Mouse X") * turnSpeed;
+        mouseY += Input.GetAxis("Mouse Y") * turnSpeed;
+
+        transform.localRotation = Quaternion.Euler(-mouseY, mouseX, 0);
 
     }
 }
