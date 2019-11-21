@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interactables\NumberPad.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/AINT253/EscapeRoom/Escape Room/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -384,9 +384,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c0300000
-      m_LastClickedID: 12480
-      m_ExpandedIDs: 78fbffff
+      m_SelectedIDs: 683f0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 78fbffff88300000e0300000f6300000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.341916, y: -0.07161212, z: -4.064412}
+    m_Target: {x: 31.41489, y: 7.725879, z: 1.2690184}
     speed: 2
-    m_Value: {x: 3.341916, y: -0.07161212, z: -4.064412}
+    m_Value: {x: 31.41489, y: 7.725879, z: 1.2690184}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.083763376, y: -0.74809825, z: 0.09608668, w: -0.6513448}
+    m_Target: {x: -0.020315366, y: -0.66910785, z: 0.018249227, w: -0.7428039}
     speed: 2
-    m_Value: {x: -0.083757095, y: -0.74804217, z: 0.096079476, w: -0.65129596}
+    m_Value: {x: -0.020313246, y: -0.66903806, z: 0.018247323, w: -0.7427264}
   m_Size:
-    m_Target: 15.082656
+    m_Target: 50.754036
     speed: 2
-    m_Value: 15.082656
+    m_Value: 48.568455
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -638,20 +638,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Animation
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets
+  - Assets/Animation
   m_LastFoldersGridSize: 81
   m_LastProjectPath: D:\AINT253\EscapeRoom\Escape Room
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a2c0000
-    m_LastClickedID: 11402
-    m_ExpandedIDs: 000000008a2c000000ca9a3b
+    m_SelectedIDs: 683f0000
+    m_LastClickedID: 16232
+    m_ExpandedIDs: 000000008a2c0000d02d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
