@@ -31,4 +31,10 @@ public class Cog : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
+
+    public void Place()
+    {
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<Animator>().Play("CogPlace");
+    }
 }

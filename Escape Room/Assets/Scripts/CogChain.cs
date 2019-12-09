@@ -22,6 +22,7 @@ public class CogChain : MonoBehaviour
     {
         if (cog.GetComponent<Cog>().inHands == true)
         {
+            cog.SendMessage("Place", SendMessageOptions.DontRequireReceiver);
             complete = true;
         }
     }
