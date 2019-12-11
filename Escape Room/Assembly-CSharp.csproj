@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Interactables\Cog.cs" />
     <Compile Include="Assets\Scripts\Interactables\NumberPad.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\WaterFall.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/AINT253/EscapeRoom/Escape Room/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
