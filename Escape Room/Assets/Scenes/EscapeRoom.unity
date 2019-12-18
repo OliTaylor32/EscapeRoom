@@ -1575,7 +1575,6 @@ GameObject:
   m_Component:
   - component: {fileID: 422381485}
   - component: {fileID: 422381484}
-  - component: {fileID: 422381486}
   m_Layer: 0
   m_Name: NumberPad
   m_TagString: Untagged
@@ -1615,19 +1614,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &422381486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422381481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db1e59682eb1074ab6866da5c2e9cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 185972671}
 --- !u!1 &432831012
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,7 +3379,7 @@ GameObject:
   - component: {fileID: 776100053}
   - component: {fileID: 776100052}
   m_Layer: 0
-  m_Name: WallCog (2)
+  m_Name: WallCog3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13450,8 +13436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db7a09e4f919ba4ba98f9e242eb1e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cog: {fileID: 1088170642}
+  missingCog: {fileID: 1088170642}
   complete: 0
+  cog1: {fileID: 1491548981}
+  cog2: {fileID: 1176134298}
+  cog3: {fileID: 776100050}
 --- !u!1 &893014618
 GameObject:
   m_ObjectHideFlags: 0
@@ -13964,8 +13953,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inHands: 0
-  camera: {fileID: 2088053756}
   placed: 0
+  children:
+  - {fileID: 1189588321}
+  - {fileID: 1760221966}
+  - {fileID: 482406793}
+  - {fileID: 88185658}
+  - {fileID: 270585515}
+  - {fileID: 815407469}
 --- !u!65 &1088170644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14034,7 +14029,7 @@ Transform:
   m_GameObject: {fileID: 1088170642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.453, y: 0.396, z: 1.139}
-  m_LocalScale: {x: 0.33826014, y: 0.01502762, z: 0.33826014}
+  m_LocalScale: {x: 0.3878491, y: 0.017230669, z: 0.3878491}
   m_Children:
   - {fileID: 1189588319}
   - {fileID: 1760221964}
@@ -14466,7 +14461,7 @@ GameObject:
   - component: {fileID: 1176134301}
   - component: {fileID: 1176134300}
   m_Layer: 0
-  m_Name: WallCog (1)
+  m_Name: WallCog2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15034,7 +15029,7 @@ GameObject:
   - component: {fileID: 1392591411}
   - component: {fileID: 1392591410}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class CogChain : MonoBehaviour
 {
-    public GameObject cog;
+    public GameObject missingCog;
     public bool complete;
+    public GameObject cog1;
+    public GameObject cog2;
+    public GameObject cog3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +19,20 @@ public class CogChain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        cog1.transform.Rotate(0, 20 * Time.deltaTime, 0);
+        if (complete == true)
+        {
+            cog2.transform.Rotate(0, 20 * Time.deltaTime, 0);
+            cog3.transform.Rotate(0, -20 * Time.deltaTime, 0);
+        }
     }
 
-    public void OnMouseDown()
+    public IEnumerator OnMouseDown()
     {
-        if (cog.GetComponent<Cog>().inHands == true)
+        if (missingCog.GetComponent<Cog>().inHands == true)
         {
-            cog.SendMessage("Place", SendMessageOptions.DontRequireReceiver);
+            missingCog.SendMessage("Place", SendMessageOptions.DontRequireReceiver);
+            yield return new WaitForSeconds(1.5f);
             complete = true;
         }
     }
