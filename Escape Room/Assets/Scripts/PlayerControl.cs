@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.lockCursor = true;
         charController = gameObject.GetComponent<CharacterController>();
     }
 

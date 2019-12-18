@@ -63,8 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CogChain.cs" />
+    <Compile Include="Assets\Scripts\FloorNo.cs" />
     <Compile Include="Assets\Scripts\Interactables\Cog.cs" />
-    <Compile Include="Assets\Scripts\Interactables\NumberPad.cs" />
+    <Compile Include="Assets\Scripts\Interactables\NoPad.cs" />
+    <Compile Include="Assets\Scripts\NoDisplay.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\WaterFall.cs" />
     <Reference Include="Unity.Timeline.Editor">
