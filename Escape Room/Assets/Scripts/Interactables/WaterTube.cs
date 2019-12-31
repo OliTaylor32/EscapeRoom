@@ -28,8 +28,13 @@ public class WaterTube : MonoBehaviour
 
     private IEnumerator Fill()
     {
+        bucket.GetComponentInParent<Animator>().Play("BucketPour");
+        bucket.GetComponent<MeshRenderer>().enabled = true;
+        yield return new WaitForSeconds(1);
         gameObject.GetComponent<Animator>().Play("TubeFill");
         yield return new WaitForSeconds(2);
         //Activate Capsule collision.
+        yield return new WaitForSeconds(1);
+        bucket.GetComponent<MeshRenderer>().enabled = false;
     }
 }

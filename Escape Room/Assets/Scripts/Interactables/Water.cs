@@ -5,6 +5,7 @@ using UnityEngine;
 public class Water : MonoBehaviour
 {
     public GameObject bucket;
+    public bool active;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,9 @@ public class Water : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (bucket.GetComponent<Bucket>().GetInHands() == true)
+        if (bucket.GetComponent<Bucket>().GetInHands() == true && active == true)
         {
-            bucket.GetComponent<Bucket>().fillBucket();
+            bucket.GetComponent<Bucket>().FillBucket();
         }
 
     }

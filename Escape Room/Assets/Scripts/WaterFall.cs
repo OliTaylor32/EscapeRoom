@@ -33,5 +33,6 @@ public class WaterFall : MonoBehaviour
         splash.SetActive(true);
         water.GetComponent<Animator>().Play("WaterRise");
         water.GetComponent<Animator>().Play("WaterStart");
+        water.GetComponent<Water>().active = true;
     }
 }

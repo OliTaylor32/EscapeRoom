@@ -32,12 +32,20 @@ public class Bucket : MonoBehaviour
         return inHands;
     }
     
-    public void fillBucket()
+    public void FillBucket()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
-        //Play Fill animation
+        gameObject.GetComponentInParent<Animator>().Play("BucketFill");
         print("Filled Bucket");
+        StartCoroutine(FillComplete());
+    }
+
+    public IEnumerator FillComplete()
+    {
+        yield return new WaitForSeconds(3);
         filled = true;
+        gameObject.GetComponentInParent<Animator>().Play("BucketIdle");
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
     
     public bool GetFilled()
