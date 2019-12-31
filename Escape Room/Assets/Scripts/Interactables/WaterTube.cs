@@ -5,6 +5,9 @@ using UnityEngine;
 public class WaterTube : MonoBehaviour
 {
     public GameObject bucket;
+    public GameObject box;
+    public GameObject capsule;
+    public GameObject bucketHandle;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +33,13 @@ public class WaterTube : MonoBehaviour
     {
         bucket.GetComponentInParent<Animator>().Play("BucketPour");
         bucket.GetComponent<MeshRenderer>().enabled = true;
+        bucketHandle.GetComponent<MeshRenderer>().enabled = true;
         yield return new WaitForSeconds(1);
         gameObject.GetComponent<Animator>().Play("TubeFill");
         yield return new WaitForSeconds(2);
-        //Activate Capsule collision.
-        yield return new WaitForSeconds(1);
+        capsule.GetComponent<MeshRenderer>().enabled = false;
         bucket.GetComponent<MeshRenderer>().enabled = false;
+        bucketHandle.GetComponent<MeshRenderer>().enabled = false;
+        box.GetComponent<Box>().KeyObtained();
     }
 }

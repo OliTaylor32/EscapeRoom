@@ -6,12 +6,14 @@ public class Bucket : MonoBehaviour
 {
     private bool inHands;
     private bool filled;
+    public GameObject handle;
     // Start is called before the first frame update
     void Start()
     {
         inHands = false;
         filled = false;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
+        handle.GetComponent<MeshRenderer>().enabled = true;
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class Bucket : MonoBehaviour
         print("Bucket Clicked");
         inHands = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
+        handle.GetComponent<MeshRenderer>().enabled = false;
     }
 
     public bool GetInHands()
@@ -35,6 +38,7 @@ public class Bucket : MonoBehaviour
     public void FillBucket()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
+        handle.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponentInParent<Animator>().Play("BucketFill");
         print("Filled Bucket");
         StartCoroutine(FillComplete());
@@ -46,6 +50,7 @@ public class Bucket : MonoBehaviour
         filled = true;
         gameObject.GetComponentInParent<Animator>().Play("BucketIdle");
         gameObject.GetComponent<MeshRenderer>().enabled = false;
+        handle.GetComponent<MeshRenderer>().enabled = false;
     }
     
     public bool GetFilled()

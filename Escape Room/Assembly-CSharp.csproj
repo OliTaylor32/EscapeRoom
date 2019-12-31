@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CogChain.cs" />
     <Compile Include="Assets\Scripts\FloorNo.cs" />
+    <Compile Include="Assets\Scripts\Interactables\Box.cs" />
     <Compile Include="Assets\Scripts\Interactables\Bucket.cs" />
     <Compile Include="Assets\Scripts\Interactables\Cog.cs" />
     <Compile Include="Assets\Scripts\Interactables\NoPad.cs" />
