@@ -51,6 +51,7 @@ public class Cog : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         gameObject.GetComponent<Animator>().enabled = false;
         placed = true;
+        inHands = false;
 
     }
 }

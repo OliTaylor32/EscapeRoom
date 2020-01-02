@@ -25,6 +25,11 @@ public class CogChain : MonoBehaviour
             cog2.transform.Rotate(0, 20 * Time.deltaTime, 0);
             cog3.transform.Rotate(0, -20 * Time.deltaTime, 0);
         }
+
+        if (missingCog.GetComponent<Cog>().inHands == true)
+        {
+            complete = false;
+        }
     }
 
     public IEnumerator OnMouseDown()
