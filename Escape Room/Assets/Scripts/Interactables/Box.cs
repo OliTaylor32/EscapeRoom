@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
+    public BoxCollider boxCollision;
     private bool unlocked;
 
     // Start is called before the first frame update
@@ -28,6 +29,8 @@ public class Box : MonoBehaviour
         if (unlocked == true)
         {
             gameObject.GetComponent<Animator>().Play("RodBoxOpen");
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            boxCollision.enabled = false;
         }
     }
 }

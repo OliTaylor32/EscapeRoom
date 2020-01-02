@@ -57,4 +57,20 @@ public class Bucket : MonoBehaviour
     {
         return filled;
     }
+    
+    public void BuildRod()
+    {
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        handle.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponentInParent<Animator>().Play("BucketBuild");
+        StartCoroutine(BuildEnd());
+    }
+
+    private IEnumerator BuildEnd()
+    {
+        yield return new WaitForSeconds(3);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        handle.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponentInParent<Animator>().Play("BucketIdle");
+    }
 }
