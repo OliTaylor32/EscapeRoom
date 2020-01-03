@@ -8,11 +8,13 @@ public class WaterFall : MonoBehaviour
     public GameObject water;
     public GameObject wheel;
     public GameObject splash;
+    public GameObject waves;
     // Start is called before the first frame update
     void Start()
     {
         active = false;
         splash.SetActive(false);
+        waves.GetComponent<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -34,5 +36,7 @@ public class WaterFall : MonoBehaviour
         water.GetComponent<Animator>().Play("WaterRise");
         water.GetComponent<Animator>().Play("WaterStart");
         water.GetComponent<Water>().active = true;
+        waves.GetComponent<ParticleSystem>().Play();
+
     }
 }
