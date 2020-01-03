@@ -24,7 +24,8 @@ public class PressurePlateExit : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().Play("PressureDown");
             cog.GetComponent<Cog>().Drop();
-            //Activate Door
+            door.GetComponent<Animator>().Play("FinishActivate");
+            door.GetComponent<BoxCollider>().enabled = true;
         }
     }
 }
