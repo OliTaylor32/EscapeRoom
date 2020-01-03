@@ -32,4 +32,20 @@ public class Rod : MonoBehaviour
         }
     }
 
+    public void Place()
+    {
+        gameObject.GetComponent<Animator>().Play("RodPlace");
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        hook.GetComponent<MeshRenderer>().enabled = true;
+        StartCoroutine(PlaceEnd());
+    }
+
+    private IEnumerator PlaceEnd()
+    {
+        yield return new WaitForSeconds(2.5f);
+        gameObject.GetComponent<Animator>().Play("RodIdle");
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        hook.GetComponent<MeshRenderer>().enabled = false;
+    }
+
 }

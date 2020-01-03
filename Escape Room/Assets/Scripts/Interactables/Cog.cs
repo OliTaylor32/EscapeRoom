@@ -54,4 +54,17 @@ public class Cog : MonoBehaviour
         inHands = false;
 
     }
+
+    public void Drop()
+    {
+        placed = false;
+        gameObject.GetComponent<Animator>().enabled = true;
+        foreach (MeshRenderer r in children)
+            r.enabled = true;
+
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<Animator>().Play("CogDrop");
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        inHands = false;
+    }
 }

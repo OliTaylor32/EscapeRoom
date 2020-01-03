@@ -73,4 +73,14 @@ public class Bucket : MonoBehaviour
         handle.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponentInParent<Animator>().Play("BucketIdle");
     }
+
+    public void Place()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        handle.GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponentInParent<Animator>().Play("BucketPlace");
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+    }
+
 }

@@ -19,13 +19,15 @@ public class PressurePlateBridge : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public IEnumerator OnMouseDown()
     {
         if (rod.GetComponent<Rod>().collected == true)
         {
+
+            rod.GetComponent<Rod>().Place();
+            bucket.GetComponent<Bucket>().Place();
+            yield return new WaitForSeconds(1.5f);
             gameObject.GetComponent<Animator>().Play("PressureDown");
-            //Play animation for Rod
-            //Play animation for bucket
 
             bridge.GetComponent<Bridge>().Activate();
         }

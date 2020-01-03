@@ -23,8 +23,7 @@ public class PressurePlateExit : MonoBehaviour
         if (cog.GetComponent<Cog>().inHands == true)
         {
             gameObject.GetComponent<Animator>().Play("PressureDown");
-            //Play animation for Rod
-            //Play animation for bucket
+            cog.GetComponent<Cog>().Drop();
             //Activate Door
         }
     }
