@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bridge.cs" />
     <Compile Include="Assets\Scripts\CogChain.cs" />
+    <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\FloorNo.cs" />
     <Compile Include="Assets\Scripts\Interactables\Box.cs" />
     <Compile Include="Assets\Scripts\Interactables\Bucket.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Interactables\StringSwitch.cs" />
     <Compile Include="Assets\Scripts\Interactables\Water.cs" />
     <Compile Include="Assets\Scripts\Interactables\WaterTube.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\NoDisplay.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\WaterFall.cs" />
