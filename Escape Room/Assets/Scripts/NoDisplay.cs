@@ -8,12 +8,15 @@ public class NoDisplay : MonoBehaviour
     public int display;
     public GameObject otherDisplay;
     public GameObject door;
+    public AudioSource musicPlayer;
+    public AudioClip music;
     public bool inUse;
 
     // Start is called before the first frame update
     void Start()
     {
         inUse = false;
+        musicPlayer.Pause();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class NoDisplay : MonoBehaviour
                 if (value == 7 && otherDisplay.GetComponent<NoDisplay>().value == 1)
                 {
                     Destroy(door);
+                    musicPlayer.UnPause();
                 }
                 else
                 {
