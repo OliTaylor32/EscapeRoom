@@ -6,7 +6,6 @@ public class StringSwitch : MonoBehaviour
 {
     private bool active;
     public GameObject waterFall;
-    public GameObject waterWheel;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +26,7 @@ public class StringSwitch : MonoBehaviour
 
         if (active == false)
         {
+            GetComponent<AudioSource>().Play(0);
             active = true;
             waterFall.GetComponent<WaterFall>().Activate();
         }

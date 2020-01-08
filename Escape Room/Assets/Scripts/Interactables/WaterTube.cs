@@ -8,10 +8,11 @@ public class WaterTube : MonoBehaviour
     public GameObject box;
     public GameObject capsule;
     public GameObject bucketHandle;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class WaterTube : MonoBehaviour
 
     private IEnumerator Fill()
     {
+        gameObject.GetComponent<AudioSource>().Play(0);
         bucket.GetComponentInParent<Animator>().Play("BucketPour");
         bucket.GetComponent<MeshRenderer>().enabled = true;
         bucketHandle.GetComponent<MeshRenderer>().enabled = true;

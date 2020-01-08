@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     public float moveSpeed,turnSpeed;
     public float mouseX, mouseY;
     CharacterController charController;
+    public AudioSource footsteps;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,28 +18,33 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool walking = false;
         if (Input.GetKey(KeyCode.W))
         {
             Vector3 direction = transform.TransformDirection(Vector3.forward);
             charController.SimpleMove(direction * moveSpeed);
+            walking = true;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             Vector3 direction = transform.TransformDirection(Vector3.back);
             charController.SimpleMove(direction * moveSpeed);
+            walking = true;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             Vector3 direction = transform.TransformDirection(Vector3.left);
             charController.SimpleMove(direction * moveSpeed);
+            walking = true;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             Vector3 direction = transform.TransformDirection(Vector3.right);
             charController.SimpleMove(direction * moveSpeed);
+            walking = true;
         }
 
         mouseX += Input.GetAxis("Mouse X") * turnSpeed;
@@ -46,5 +52,13 @@ public class PlayerControl : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(-mouseY, mouseX, 0);
 
+        if (walking == true)
+        {
+            footsteps.UnPause();
+        }
+        else
+        {
+            footsteps.Pause();
+        }
     }
 }

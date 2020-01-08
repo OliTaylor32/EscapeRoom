@@ -15,6 +15,9 @@ public class WaterFall : MonoBehaviour
         active = false;
         splash.SetActive(false);
         waves.GetComponent<ParticleSystem>().Stop();
+        gameObject.GetComponent<AudioSource>().Pause();
+        gameObject.GetComponent<AudioSource>().mute = true;
+
     }
 
     // Update is called once per frame
@@ -36,7 +39,9 @@ public class WaterFall : MonoBehaviour
         water.GetComponent<Animator>().Play("WaterRise");
         water.GetComponent<Animator>().Play("WaterStart");
         water.GetComponent<Water>().active = true;
-        waves.GetComponent<ParticleSystem>().Play();
+        waves.GetComponent<ParticleSystem>().Play(true);
+        gameObject.GetComponent<AudioSource>().UnPause();
+        gameObject.GetComponent<AudioSource>().mute = false;
 
     }
 }

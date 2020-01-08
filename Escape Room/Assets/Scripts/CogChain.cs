@@ -14,6 +14,7 @@ public class CogChain : MonoBehaviour
     void Start()
     {
         complete = false;
+        gameObject.GetComponent<AudioSource>().mute = true;
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class CogChain : MonoBehaviour
 
         if (missingCog.GetComponent<Cog>().inHands == true)
         {
+            gameObject.GetComponent<AudioSource>().mute = true;
             complete = false;
         }
     }
@@ -38,6 +40,7 @@ public class CogChain : MonoBehaviour
         {
             missingCog.SendMessage("Place", SendMessageOptions.DontRequireReceiver);
             yield return new WaitForSeconds(1.5f);
+            gameObject.GetComponent<AudioSource>().mute = false;
             complete = true;
         }
     }
