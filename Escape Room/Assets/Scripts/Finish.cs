@@ -17,7 +17,7 @@ public class Finish : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Main Camera")
+        if (other.gameObject.name == "Main Camera") //IF the collision belongs to the player, boot back to main menu.
         {
             Application.LoadLevel("TitleScreen");
         }

@@ -14,7 +14,7 @@ public class FloorNo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cog.GetComponent<Cog>().placed == true)
+        if (cog.GetComponent<Cog>().placed == true) //Show when cog chain is completed.
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
         }

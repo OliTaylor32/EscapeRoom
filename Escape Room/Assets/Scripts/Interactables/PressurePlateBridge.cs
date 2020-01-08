@@ -21,7 +21,7 @@ public class PressurePlateBridge : MonoBehaviour
 
     public IEnumerator OnMouseDown()
     {
-        if (rod.GetComponent<Rod>().collected == true)
+        if (rod.GetComponent<Rod>().collected == true) //If the rod has been collected, play animation and activate the bridge
         {
 
             rod.GetComponent<Rod>().Place();

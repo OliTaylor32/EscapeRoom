@@ -22,7 +22,7 @@ public class Bucket : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void OnMouseDown() //Collect the bucket
     {
         print("Bucket Clicked");
         inHands = true;
@@ -30,12 +30,12 @@ public class Bucket : MonoBehaviour
         handle.GetComponent<MeshRenderer>().enabled = false;
     }
 
-    public bool GetInHands()
+    public bool GetInHands() //Getter
     {
         return inHands;
     }
     
-    public void FillBucket()
+    public void FillBucket() //Called by water, plays animation
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         handle.GetComponent<MeshRenderer>().enabled = true;
@@ -44,7 +44,7 @@ public class Bucket : MonoBehaviour
         StartCoroutine(FillComplete());
     }
 
-    public IEnumerator FillComplete()
+    public IEnumerator FillComplete() //Fills and hides the bucket once animation is played
     {
         yield return new WaitForSeconds(3);
         filled = true;
@@ -53,12 +53,12 @@ public class Bucket : MonoBehaviour
         handle.GetComponent<MeshRenderer>().enabled = false;
     }
     
-    public bool GetFilled()
+    public bool GetFilled() //Getter
     {
         return filled;
     }
     
-    public void BuildRod()
+    public void BuildRod() //Called by Rod, Plays animation
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         handle.GetComponent<MeshRenderer>().enabled = true;
@@ -66,7 +66,7 @@ public class Bucket : MonoBehaviour
         StartCoroutine(BuildEnd());
     }
 
-    private IEnumerator BuildEnd()
+    private IEnumerator BuildEnd() // Hides bucket once animation is complete
     {
         yield return new WaitForSeconds(3);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -74,7 +74,7 @@ public class Bucket : MonoBehaviour
         gameObject.GetComponentInParent<Animator>().Play("BucketIdle");
     }
 
-    public void Place()
+    public void Place() //Places the bucket on the pressure pad, disables the ability to interact with the bucket
     {
         gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<MeshRenderer>().enabled = true;

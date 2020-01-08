@@ -18,7 +18,7 @@ public class NoPad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cog.GetComponent<Cog>().placed == true)
+        if (cog.GetComponent<Cog>().placed == true) //When the cog is placed allow the player to use the numberpad keys
         {
             active = true;
         }
@@ -31,14 +31,12 @@ public class NoPad : MonoBehaviour
     public void OnMouseDown()
     {
         if (active == true)
-        {
-
-
-            if (display1.GetComponent<NoDisplay>().inUse == false)
+        { 
+            if (display1.GetComponent<NoDisplay>().inUse == false) //IF the first didgit slot isn't taken up display this number
             {
                 display1.GetComponent<NoDisplay>().ButtonPressed(number);
             }
-            else
+            else //Otherwise display this number in the secound didgit slot.
             {
                 display2.GetComponent<NoDisplay>().ButtonPressed(number);
             }

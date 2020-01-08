@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     {
         
     }
-    public IEnumerator OnMouseDown()
+    public IEnumerator OnMouseDown() //When it's clicked, perform the function corresponding to the Button.
     {
         if (function == "Start")
         {

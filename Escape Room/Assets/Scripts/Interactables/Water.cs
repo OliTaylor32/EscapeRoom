@@ -20,7 +20,7 @@ public class Water : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (bucket.GetComponent<Bucket>().GetInHands() == true && active == true)
+        if (bucket.GetComponent<Bucket>().GetInHands() == true && active == true) //If the waterfall is running and the player has the bucket, fill the bucket
         {
             bucket.GetComponent<Bucket>().FillBucket();
         }

@@ -21,7 +21,7 @@ public class Rod : MonoBehaviour
 
     public IEnumerator OnMouseDown()
     {
-        if (collected == false)
+        if (collected == false) //If the rod hasn't yet been picked up
         {
             collected = true;
             gameObject.GetComponent<Animator>().Play("RodBuild");
@@ -32,7 +32,7 @@ public class Rod : MonoBehaviour
         }
     }
 
-    public void Place()
+    public void Place()//Called by the pressure plate, Plays the corresponding animation
     {
         gameObject.GetComponent<Animator>().Play("RodPlace");
         gameObject.GetComponent<MeshRenderer>().enabled = true;
@@ -40,7 +40,7 @@ public class Rod : MonoBehaviour
         StartCoroutine(PlaceEnd());
     }
 
-    private IEnumerator PlaceEnd()
+    private IEnumerator PlaceEnd() //Hides Rod once the animation is complete
     {
         yield return new WaitForSeconds(2.5f);
         gameObject.GetComponent<Animator>().Play("RodIdle");

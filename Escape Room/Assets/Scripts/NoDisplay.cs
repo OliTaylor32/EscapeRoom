@@ -22,7 +22,7 @@ public class NoDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (display == 2)
+        if (display == 2) //If it is the secound didgit display, see if the player has entered 17 into the numberpad. If so, open door.
         {
             if (inUse == true && otherDisplay.GetComponent<NoDisplay>().inUse == true)
             {
@@ -40,7 +40,7 @@ public class NoDisplay : MonoBehaviour
         }
     }
 
-    public void ButtonPressed(int number)
+    public void ButtonPressed(int number) //Called from the buttons when it is pressed.
     {
         switch (number)
         {
@@ -88,11 +88,11 @@ public class NoDisplay : MonoBehaviour
             default:
                 break;
         }
-        inUse = true;
+        inUse = true; //No other value can be inputted into this didgit slot
 
     }
 
-    public void Reset()
+    public void Reset() //Called when the combonation was incorrect, refreshing it back to 0 and allowing a new value to be inputted.
     {
         gameObject.GetComponent<Animator>().StopPlayback();
         gameObject.GetComponent<Animator>().Play("NoReset0");

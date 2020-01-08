@@ -24,13 +24,13 @@ public class StringSwitch : MonoBehaviour
         print("Clicked");
         gameObject.GetComponent<Animator>().Play("StringSwitchPull");
 
-        if (active == false)
+        if (active == false) //If it hasn't already been pulled, Begin waterfall.
         {
             GetComponent<AudioSource>().Play(0);
             active = true;
             waterFall.GetComponent<WaterFall>().Activate();
         }
-        gameObject.GetComponent<Animator>().Play("StringSwitchIdle");
+        gameObject.GetComponent<Animator>().Play("StringSwitchIdle"); //revert back to not being pulled
 
     }
 }

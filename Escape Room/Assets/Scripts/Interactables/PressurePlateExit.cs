@@ -21,7 +21,7 @@ public class PressurePlateExit : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (cog.GetComponent<Cog>().inHands == true)
+        if (cog.GetComponent<Cog>().inHands == true) //If the player has the cog, Drop cog and open exit
         {
             gameObject.GetComponent<Animator>().Play("PressureDown");
             gameObject.GetComponent<AudioSource>().Play(0);

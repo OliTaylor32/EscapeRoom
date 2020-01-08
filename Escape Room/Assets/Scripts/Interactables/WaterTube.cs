@@ -23,6 +23,7 @@ public class WaterTube : MonoBehaviour
 
     public void OnMouseDown()
     {
+        //if the player collected and filled the bucket, Fill the tube.
         if (bucket.GetComponent<Bucket>().GetInHands() == true && bucket.GetComponent<Bucket>().GetFilled() == true)
         {
             StartCoroutine(Fill());
@@ -32,6 +33,7 @@ public class WaterTube : MonoBehaviour
 
     private IEnumerator Fill()
     {
+        //Play the animations and sound for the bucked and the tube.
         gameObject.GetComponent<AudioSource>().Play(0);
         bucket.GetComponentInParent<Animator>().Play("BucketPour");
         bucket.GetComponent<MeshRenderer>().enabled = true;

@@ -15,24 +15,24 @@ public class Cog : MonoBehaviour
         placed = false;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         gameObject.GetComponent<Animator>().enabled = true;
-
-        children = GetComponentsInChildren<MeshRenderer>();
+        
+        children = GetComponentsInChildren<MeshRenderer>();//This is used to get and manage all the childrens mesh renderers so they didn't all have to be assigned and changed individually.
         foreach (MeshRenderer r in children)
-            r.enabled = true;
+            r.enabled = true; //Shows children
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (placed == true)
+        if (placed == true)//If it's in the chain, rotate
         {
             transform.Rotate(0, 20 * Time.deltaTime, 0);
         }
 
     }
 
-    public void OnMouseDown()
+    public void OnMouseDown() //Pick up and hide the cog and its children
     {
         inHands = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -41,7 +41,7 @@ public class Cog : MonoBehaviour
             r.enabled = false;
     }
 
-    public IEnumerator Place()
+    public IEnumerator Place() //Called by cog chain, show cog and play animation, player no-longer has the cog
     {
         foreach (MeshRenderer r in children)
             r.enabled = true;
@@ -55,7 +55,7 @@ public class Cog : MonoBehaviour
 
     }
 
-    public void Drop()
+    public void Drop()//Called by Pressure plate, Shows cog and plays animation, takes cog out of players hands and removes ability for player to interact with it.
     {
         placed = false;
         gameObject.GetComponent<Animator>().enabled = true;

@@ -17,6 +17,6 @@ public class Bridge : MonoBehaviour
     }
     public void Activate()
     {
-        gameObject.GetComponent<Animator>().Play("BridgeActivate");
+        gameObject.GetComponent<Animator>().Play("BridgeActivate"); //This animation makes it possible for the player to walk over the bridge
     }
 }
